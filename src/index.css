@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary-orange: oklch(65.92% 0.1948 37.8)
+}
+
 #root {
   min-height: 100dvh;
   width: 100%;

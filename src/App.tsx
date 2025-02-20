@@ -1,9 +1,11 @@
-import Navbar from "./components/layout/navbar";
+import MainNavbar from "./components/layout/main-navbar";
+import TopNavbar from "./components/layout/top-navbar";
 
 function App() {
   return (
-    <main className="p-4 mx-auto max-w-7xl">
-      <Navbar />
+    <main className="mx-auto">
+      <TopNavbar />
+      <MainNavbar />
     </main>
   );
 }
