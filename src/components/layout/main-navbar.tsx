@@ -17,34 +17,34 @@ interface SocialLink {
   href: string;
 }
 
+const mainNavItems: MainNavLink[] = [
+  { title: "Product & Services", href: "#" },
+  { title: "Promotions", href: "#" },
+  { title: "News & Events", href: "#" },
+  { title: "Safety Tips", href: "#" },
+  { title: "FAQS", href: "#" },
+  { title: "Location", href: "#" },
+];
+
+const socialLinks: SocialLink[] = [
+  { icon: facebookIcon, alt: "Facebook Icon", href: "#" },
+  { icon: twitterIcon, alt: "Twitter Icon", href: "#" },
+  { icon: youtubeIcon, alt: "Youtube Icon", href: "#" },
+];
+
 export default function MainNavbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const mainNavItems: MainNavLink[] = [
-    { title: "Product & Services", href: "#" },
-    { title: "Promotions", href: "#" },
-    { title: "News & Events", href: "#" },
-    { title: "Safety Tips", href: "#" },
-    { title: "FAQS", href: "#" },
-    { title: "Location", href: "#" },
-  ];
-
-  const socialLinks: SocialLink[] = [
-    { icon: facebookIcon, alt: "Facebook Icon", href: "#" },
-    { icon: twitterIcon, alt: "Twitter Icon", href: "#" },
-    { icon: youtubeIcon, alt: "Youtube Icon", href: "#" },
-  ];
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
     <nav className="bg-black w-full">
       {/* Desktop Navigation */}
-      <div className="mx-auto max-w-7xl hidden md:flex justify-between items-center px-4 md:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl hidden md:flex justify-between items-center px-2 md:px-6 lg:px-8">
         <div className="flex items-center flex-1">
           {mainNavItems.map((item) => (
             <a
               key={item.title}
               href={item.href}
-              className="group flex gap-2 text-white px-4 py-3 hover:bg-primary transition-colors duration-200 text-sm text-nowrap hover:text-primary-orange"
+              className="group flex gap-2 text-white px-2 py-3 hover:bg-primary transition-colors duration-200 text-sm text-nowrap hover:text-primary-orange"
             >
               <img
                 src={playIcon}
@@ -57,7 +57,7 @@ export default function MainNavbar() {
         </div>
 
         {/* Social Media Icons - Desktop */}
-        <div className="flex gap-3 items-center">
+        <div className=" flex gap-3 items-center">
           {socialLinks.map((social) => (
             <a key={social.alt} href={social.href}>
               <img
