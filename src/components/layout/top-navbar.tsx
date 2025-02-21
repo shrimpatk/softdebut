@@ -119,11 +119,15 @@ export default function TopNavbar() {
             <div className="flex bg-white items-center border-primary-orange border-solid border-2">
               <input
                 type="text"
+                aria-label="Search site"
                 placeholder="Search..."
                 className="w-full md:w-[210px] h-[23px] outline-none px-2"
               />
-              <button className="border-primary-orange border-solid border-[1px]">
-                <img src={searchIcon} alt="Search" />
+              <button
+                aria-label="Switch to Thai language"
+                className="border-primary-orange border-solid border-[1px]"
+              >
+                <img src={searchIcon} alt="Search" aria-hidden="true" />
               </button>
             </div>
           </div>

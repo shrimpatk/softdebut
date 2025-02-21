@@ -40,6 +40,7 @@ export default function HeroSection() {
         <button
           type="button"
           title="Previos Slide"
+          aria-label="Previous slide"
           onClick={prevSlide}
           className="mx-auto p-1 rounded text-white"
         >
@@ -58,6 +59,7 @@ export default function HeroSection() {
               <img
                 src={image.src}
                 alt={`Thumbnail ${index + 1}`}
+                aria-label="Next slide"
                 className={`w-full h-full object-fill aspect-[16/7] ${
                   index !== currentImgIndex
                     ? "[filter:grayscale(100%)]"

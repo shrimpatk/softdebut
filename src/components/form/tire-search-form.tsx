@@ -1,5 +1,5 @@
 import { useState } from "react";
-import tireImg from "../assets/search/SOne_index_bg_searchtype.jpg";
+import tireImg from "../../assets/search/SOne_index_bg_searchtype.jpg";
 
 export default function TireSearchForm() {
   const [formData, setFormData] = useState({
@@ -13,7 +13,7 @@ export default function TireSearchForm() {
   }
 
   return (
-    <div className="bg-primary-orange rounded-t-lg w-full max-w-[400px] mx-auto text-nowrap">
+    <div className="bg-primary-orange w-full max-w-[400px] mx-auto text-nowrap">
       <h2 className="p-2 text-white">ค้นหายาง</h2>
       <div className="bg-secondary-gray relative min-h-[300px]">
         <img
@@ -23,7 +23,11 @@ export default function TireSearchForm() {
         />
 
         <div className="relative p-4 z-20 w-[60%] ml-auto">
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-4"
+            aria-label="Tire search form"
+          >
             <div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-primary-orange rounded-full"></div>
